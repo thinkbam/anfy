@@ -1,0 +1,154 @@
+{
+  "departments": [
+    {
+      "id": "1",
+      "link": "",
+      "chinaName": "肾脏内科试题",
+      "englishName": "nephrology"
+    },
+    {
+      "id": "2",
+      "link": "",
+      "chinaName": "皮肤科试题",
+      "englishName": "dermatology"
+    },
+    {
+      "id": "3",
+      "link": "",
+      "chinaName": "血液科试题",
+      "englishName": "hematology"
+    },
+    {
+      "id": "4",
+      "link": "",
+      "chinaName": "内分泌科试题",
+      "englishName": "endocrinology"
+    },
+    {
+      "id": "5",
+      "link": "",
+      "chinaName": "儿科试题",
+      "englishName": "pediatric"
+    },
+    {
+      "id": "6",
+      "link": "",
+      "chinaName": "感染科试题",
+      "englishName": "Infectious"
+    },
+    {
+      "id": "7",
+      "link": "",
+      "chinaName": "呼吸内科试题",
+      "englishName": "respiratory"
+    },
+    {
+      "id": "8",
+      "link": "",
+      "chinaName": "普外科试题",
+      "englishName": "generalSurgery"
+    },
+    {
+      "id": "9",
+      "link": "",
+      "chinaName": "乳腺外科试题",
+      "englishName": "breastSurgery"
+    },
+    {
+      "id": "10",
+      "link": "",
+      "chinaName": "烧伤科试题",
+      "englishName": "burns"
+    },
+    {
+      "id": "11",
+      "link": "",
+      "chinaName": "手术室试题",
+      "englishName": "operatingRoom"
+    },
+    {
+      "id": "12",
+      "link": "",
+      "chinaName": "神经内科试题",
+      "englishName": "neurology"
+    },
+    {
+      "id": "13",
+      "link": "",
+      "chinaName": "肝胆胰外科试题",
+      "englishName": "hepatopancreatobiliarySurgery"
+    },
+    {
+      "id": "14",
+      "link": "",
+      "chinaName": "骨科试题",
+      "englishName": "orthopedics"
+    },
+    {
+      "id": "15",
+      "link": "",
+      "chinaName": "麻醉科试题",
+      "englishName": "anesthesiology"
+    },
+    {
+      "id": "16",
+      "link": "",
+      "chinaName": "泌尿外科",
+      "englishName": "urinarySurgery"
+    },
+    {
+      "id": "17",
+      "link": "",
+      "chinaName": "胃肠外科试题",
+      "englishName": "gastrointestinalSurgery"
+    },
+    {
+      "id": "18",
+      "link": "",
+      "chinaName": "心外科试题",
+      "englishName": "cardiacSurgery"
+    },
+    {
+      "id": "19",
+      "link": "",
+      "chinaName": "胸外科试题",
+      "englishName": "thoracicSurgery"
+    },
+    {
+      "id": "20",
+      "link": "",
+      "chinaName": "甲状腺外科试题",
+      "englishName": "thyroidSurgery"
+    },
+    {
+      "id": "21",
+      "link": "",
+      "chinaName": "脑外科试题",
+      "englishName": "brainSurgery"
+    },
+    {
+      "id": "22",
+      "link": "",
+      "chinaName": "急诊科试题",
+      "englishName": "emergency"
+    },
+    {
+      "id": "23",
+      "link": "",
+      "chinaName": "压疮试题",
+      "englishName": "pressureSores"
+    },
+    {
+      "id": "24",
+      "link": "",
+      "chinaName": "静脉试题",
+      "englishName": "tendons"
+    },
+    {
+      "id": "25",
+      "link": "",
+      "chinaName": "重症监护室试题",
+      "englishName": "icu"
+    }
+  ]
+}
