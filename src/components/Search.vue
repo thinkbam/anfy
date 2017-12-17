@@ -121,7 +121,7 @@
   }
 
   .clear {
-    height: 92px;
+    height: 100px;
   }
 
   .mint-search {
