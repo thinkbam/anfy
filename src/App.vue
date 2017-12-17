@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <!--<Search></Search>-->
-    <Home></Home>
+    <Search></Search>
+    <!--<Home></Home>-->
 
   </div>
 </template>
 
 <script>
   import Search from './components/Search'
-  import Home from './components/Home'
 
   export default {
     name: 'app',
     components: {
-      Search, Home
+      Search
     }
   }
 </script>

@@ -1,59 +1,70 @@
 <template>
   <div class="ayfy-home">
     <div class="ayfu-header">
-      <mt-header title="在线题库"></mt-header>
+      <!--<mt-header title="在线题库"></mt-header>-->
+      <div tabindex="Department" v-on:click="itemClick($event)">科室列表</div>
+      <div tabindex="Search" v-on:click="itemClick($event)">在线搜索</div>
+      <div tabindex="OnlineExam" v-on:click="itemClick($event)">在线考试</div>
     </div>
     <div class="ayfy-container">
-      <ul v-for="item in 100">
-        <li>{{item}}</li>
-      </ul>
+      <Department v-if="renderComponents == 'Department'"></Department>
+      <Search v-else-if="renderComponents == 'Search'"></Search>
     </div>
-    <div class="ayfy-footer">
-      <div>科室列表</div>
-      <div>在线搜索</div>
-      <div>在线考试</div>
-    </div>
+    <!--<div class="ayfy-footer">-->
+      <!--<div tabindex="Department" v-on:click="itemClick($event)">科室列表</div>-->
+      <!--<div tabindex="Search" v-on:click="itemClick($event)">在线搜索</div>-->
+      <!--<div tabindex="OnlineExam" v-on:click="itemClick($event)">在线考试</div>-->
+    <!--</div>-->
   </div>
 </template>
 
 <script>
   import Vue from 'vue'
-  import axios from 'axios'
   import Mint from 'mint-ui'
+  import Search from './Search'
+  import Department from './Department'
 
   Vue.use(Mint)
   export default {
     name: 'home',
+    components: {
+      Search, Department
+    },
     data: function () {
       return {
-        selected: {
-          type: Number,
-          default: 1
-        },
-        departments: {
-          type: Array,
-          default: Array.of()
+        renderComponents: {
+          type: String,
+          default: 'Department'
         }
       }
     },
     methods: {
-      itemClick: function () {
-        alert('1111')
+      itemClick: function (e) {
+        let tabindex = e.target.getAttribute('tabindex')
+        switch (tabindex) {
+          case 'Department':
+            this.renderComponents = 'Department'
+            break
+          case 'Search':
+            this.renderComponents = 'Search'
+            break
+          case 'OnlineExam':
+            // this.renderComponents = 'OnlineExam'
+            Mint.MessageBox('温馨提示', '未完待续...')
+            break
+          default:
+            this.rendeComponents = 'Department'
+        }
       }
     },
     created () {
-      axios.get('static/data/department.json').then(response => {
-        console.log('home response->', response)
-        this.departments = response.data.departments
-      }).catch(error => {
-        Mint.MessageBox('提示', error)
-      })
+      // 设置默认渲染组件（PS：设定默认值貌似不行？）
+      this.renderComponents = 'Department'
     }
   }
 </script>
 
 <style scoped>
-
   .ayfy-home {
     display: -webkit-box;
     display: -moz-box;
@@ -66,25 +77,24 @@
 
   .ayfu-header {
     height: 40px;
-    border: 1px solid red;
   }
+
   .ayfy-container {
     -webkit-overflow-scrolling: touch;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     box-flex: 1;
     overflow: scroll;
-    border: 1px solid darkgreen;
   }
 
-  .ayfy-footer {
+  .ayfu-header {
     display: -webkit-box;
     display: -moz-box;
     display: box;
     height: 40px;
-    /*border: 1px solid blue;*/
   }
-  .ayfy-footer div{
+
+  .ayfu-header div {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     box-flex: 1;
@@ -92,6 +102,5 @@
     line-height: 40px;
     background-color: #26A2FF;
     color: #ffffff;
-    /*border: 1px solid forestgreen;*/
   }
 </style>

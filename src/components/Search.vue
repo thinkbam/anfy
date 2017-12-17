@@ -1,7 +1,10 @@
 <template>
   <div>
-    <mt-header fixed title="题库"></mt-header>
-    <mt-search v-model="search" cancel-text="取消" placeholder="请输入关键字"></mt-search>
+    <div class="anfy-online-search">
+      <mt-header title="在线题库"></mt-header>
+      <mt-search v-model="search" cancel-text="取消" placeholder="请输入关键字"></mt-search>
+    </div>
+    <div class="clear"></div>
     <div class="result" v-for="result,index in searchResults">
       <div v-show="result.options == ''">
         <div class="question">{{index+1}}.{{result.question}}</div>
@@ -20,9 +23,6 @@
   import Vue from 'vue'
   import axios from 'axios'
   import Mint from 'mint-ui'
-  // import { MessageBox, Search } from 'mint-ui'
-  // Vue.component(Search.name, Search)
-  // Vue.component(MessageBox.name, MessageBox)
 
   Vue.use(Mint)
   export default {
@@ -107,25 +107,30 @@
           orthopedics, anesthesiology, urinarySurgery, gastrointestinalSurgery, cardiacSurgery,
           thoracicSurgery, thyroidSurgery, brainSurgery, emergency, pressureSores, tendons, icu)
       }).catch(function (error) {
-        Mint.MessageBox('提示', error)
+        Mint.MessageBox('温馨提示', error)
       })
     }
   }
 </script>
 
 <style scoped>
-  /* 重写mint ui样式 */
+
+  .anfy-online-search {
+    position: fixed;
+    width: 100%;
+  }
+
+  .clear {
+    height: 92px;
+  }
+
   .mint-search {
     height: auto;
   }
 
-  .mint-header.is-fixed {
-    position: inherit;
-  }
-
   /* 搜索结果 */
   .result {
-    padding: 1rem;
+    padding: 0.8rem;
     text-align: left;
   }
 
