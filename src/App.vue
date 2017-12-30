@@ -2,7 +2,6 @@
   <div id="app">
     <Search></Search>
     <!--<Home></Home>-->
-
   </div>
 </template>
 
