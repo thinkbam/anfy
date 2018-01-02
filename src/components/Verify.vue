@@ -10,7 +10,7 @@
 
 <script>
   import Vue from 'vue'
-  import axios from 'axios'
+  // import axios from 'axios'
   import Mint from 'mint-ui'
 
   Vue.use(Mint)
@@ -46,11 +46,11 @@
       }
     },
     counted () {
-      axios.get('http://pv.sohu.com/cityjson?ie=utf-8').then(response => {
-        console.log('response-->', response)
-      }).catch(function (error) {
-        Mint.MessageBox('温馨提示', error)
-      })
+      // axios.get('http://pv.sohu.com/cityjson?ie=utf-8').then(response => {
+      //   console.log('response-->', response)
+      // }).catch(function (error) {
+      //   Mint.MessageBox('温馨提示', error)
+      // })
     }
   }
 </script>
