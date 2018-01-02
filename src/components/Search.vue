@@ -101,11 +101,20 @@
         let tendons = response.data.tendons
         // 重症监护室试题
         let icu = response.data.icu
+        // 风湿科
+        let rheumatism = response.data.rheumatism
+        // 消化科
+        let digestive = response.data.digestive
+        // 循环系统疾病
+        let circulatoryDisease = response.data.circulatoryDisease
+        // 肿瘤科
+        let oncology = response.data.oncology
         _this.searchLibrary = _this.searchLibrary.concat(nephrology, dermatology,
           hematology, endocrinology, pediatric, Infectious, respiratory, generalSurgery,
           breastSurgery, burns, operatingRoom, neurology, hepatopancreatobiliarySurgery,
           orthopedics, anesthesiology, urinarySurgery, gastrointestinalSurgery, cardiacSurgery,
-          thoracicSurgery, thyroidSurgery, brainSurgery, emergency, pressureSores, tendons, icu)
+          thoracicSurgery, thyroidSurgery, brainSurgery, emergency, pressureSores, tendons, icu,
+          rheumatism, digestive, circulatoryDisease, oncology)
       }).catch(function (error) {
         Mint.MessageBox('温馨提示', error)
       })
